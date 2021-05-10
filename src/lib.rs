@@ -7,6 +7,8 @@
 
 #![no_std]
 #![warn(missing_docs)]
+#![feature(const_fn)]
+
 
 pub use crate::bootinfo::BootInfo;
 
@@ -20,6 +22,7 @@ compile_error!(
 
 #[cfg(not(any(target_arch = "x86_64", target_arch = "x86")))]
 compile_error!("This crate only supports the x86_64 architecture.");
+
 
 /// Defines the entry point function.
 ///
