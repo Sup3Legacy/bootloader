@@ -125,7 +125,7 @@ fn main() {
     // check that the kernel file exists
     assert!(
         kernel.exists(),
-        format!("KERNEL does not exist: {}", kernel.display())
+        "KERNEL does not exist")
     );
 
     // get access to llvm tools shipped in the llvm-tools-preview rustup component
